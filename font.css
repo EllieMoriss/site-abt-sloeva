@@ -1,0 +1,19 @@
+a.hero__link, p.hero__text, ul.hero__list {
+  font-size: 20px;
+  font-weight: 400; 
+  font-style: italic; /* для текста */
+}
+
+.hero__shadow{
+  font-size: 7em;
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 400; /* regular для h2 */ 
+}
+
+h1 {
+  font-weight: 700; /* bold для h1 */ 
+}
+

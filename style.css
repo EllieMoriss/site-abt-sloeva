@@ -1,0 +1,196 @@
+@import url("font.css");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%; /* ??? */
+  background-color: #fbfbfb;
+  background-image: url("background.jpg");
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: Libre Baskerville, serif;
+}
+
+ul, p, a {
+  color: #986c3a;
+}
+
+.header {
+  display: flex;
+  /* min-height: 116px; */
+  padding-left: 150px;
+  padding-right: 30px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid antiquewhite;
+}
+
+.header__nav{
+  display: flex;
+  justify-content: stretch;
+}
+
+.header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-basis: 100%;
+  gap: 30px;
+  align-items: center;
+  justify-content: right;
+}
+
+a.header__link , a.hero__link, a {
+  color: #986c3a;
+  text-decoration: none;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+}
+
+a:hover {
+  color: darkolivegreen;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+  margin: 2em;
+  place-items: center;
+  position: relative;  /* для тени */
+  /* padding: ; */
+}
+
+.hero__shadow{
+  position: absolute;
+  margin: 0;
+  color: rgba(185, 138, 84, 0.1);
+}
+
+.hero__info-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 154px 126px 135px 162px; */
+}
+
+p.hero__text {
+  margin: 0;
+  margin-bottom: 52px;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.hero__cont-block{
+  margin-left: 30px;
+}
+
+.hero__img {
+  width: 200px;
+  box-shadow: 0 0 10px #b98a54;
+  border-radius: 50%;
+}
+
+.hero__contacts {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+}
+
+.hero__list {
+  margin: 1em;
+  padding: 0;
+  background-color: rgba(251, 251, 251, 0.7);
+}
+
+.hero__cont-tel::before {
+  content: "\2706";
+  color: darkgreen;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+.hero__cont-mail::before {
+  content: "\0040";
+  color: darkgreen;
+  font-size: 1.4em;
+  margin-right: 0.5em;
+}
+
+footer {
+  display: flex;
+  /* min-height: 116px; */
+  padding-right: 20px;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  border-top: 2px solid antiquewhite;
+  position: fixed;
+  bottom: 0;
+  min-width: 100vw;
+}
+
+.footer__link {
+  color: black;
+}
+p.footer__date {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-left: 30px;
+  }
+
+  .hero {
+    grid-template-columns: 40% 1fr 40%;
+  }
+
+  .hero__img{
+    width: 80%;
+    height: 80%;
+  }
+
+  p.hero__text{
+    margin-bottom: 30px;
+  }
+
+  .hero__wrap {
+    margin-left: 30px;
+  }
+
+  p.hero__shadow{
+    display: none;
+  }
+
+  ul.hero__list, p.hero__text, a.hero__link {
+    color: #b98a54;
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 22px;
+  }
+}
+
+/* @media (min-width: 769px) and (max-width: 827px) {
+  .hero__item:last-of-type {
+    color: black;
+  }
+} */
+
